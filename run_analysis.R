@@ -5,6 +5,17 @@ dataUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
 outputDirectory <- "output"
 
 ## Helper functions
+getMeanFeatures <- function() {
+    features <- read.table("UCI HAR Dataset/features.txt", stringsAsFactors=FALSE)
+    features <- data.table(FeatureNumber=features$V1, Description=features$V2)
+    meanFeatures <- features[like(Description, "-mean()")]
+}
+
+getActivites <- function() {
+    activities <- read.table("UCI HAR Dataset/activity_labels.txt", stringsAsFactors=FALSE)
+    activities <- data.table(ActivityNumber=activities$V1, Description=activities$V2)
+}
+
 installPackageIfMissing <- function(x) {
     
     if (!require(x, character.only = TRUE)) {
@@ -40,3 +51,11 @@ unzip(zippedData, overwrite=TRUE, exdir=unzippedDirectory)
 if (!file.exists(outputDirectory)) {
     dir.create(outputDirectory)
 }
+
+## Build a table of interesting features, i.e. those that include '-mean()'
+meanFeatures <- getMeanFeatures() 
+print(meanFeatures)
+
+## Build a table of the activities
+activities <- getActivites()
+print(activities)
