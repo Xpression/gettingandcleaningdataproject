@@ -149,4 +149,4 @@ tidyDataOutput <- tidyRawDataset %>%
          summarise_each(funs(mean))
 
 ## Write the output file containing the summarized tidy dataset
-write.table(tidyDataOutput, paste(outputDirectory, outputFile, sep="/"))
+write.table(tidyDataOutput, paste(outputDirectory, outputFile, sep="/"), row.name=FALSE)
