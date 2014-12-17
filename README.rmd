@@ -37,6 +37,7 @@ more thorough description of this output.
 
 ### Script operation
 The script runs through the following steps:
+
 1. Install dplyr and gdata packages if missing, and load necessary libraries.
 
 2. If missing, download input dataset. Unzip it, and create output folder.
