@@ -30,7 +30,7 @@ The output dataset - named "tidyData.txt" - will be placed in the output folder.
 This file can be read into R by using the following command (assuming current 
 working directory being the output folder):
 ```{r}
-data <- read.table("output/tidyData.txt", header = TRUE) 
+data <- read.table("tidyData.txt", header = TRUE) 
 ```
 See https://class.coursera.org/getdata-016/forum/thread?thread_id=50 for a 
 more thorough description of this output.
