@@ -101,35 +101,35 @@ Mean of all samples corresponding to a subject-activity pair. The value which me
 is calculated is the mean gravity acceleration jerk along the Z-axis. Samples from 
 the time domain.
 
-**timedomaingyrojerkmeanx** *Numeric: [-1, 1]*
+**timedomainbodygyromeanx** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
-is calculated is the mean gyro jerk along the X-axis. Samples from the time domain.
+is calculated is the mean gyro along the X-axis. Samples from the time domain.
 
-**timedomaingyrojerkmeany** *Numeric: [-1, 1]*
-
-Mean of all samples corresponding to a subject-activity pair. The value which mean 
-is calculated is the mean gyro jerk along the Y-axis. Samples from the time domain.
-
-**timedomaingyrojerkmeanz** *Numeric: [-1, 1]*
+**timedomainbodygyromeany** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
-is calculated is the mean gyro jerk along the Y-axis. Samples from the time domain.
+is calculated is the mean gyro along the Y-axis. Samples from the time domain.
+
+**timedomainbodygyromeanz** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the mean gyro along the Y-axis. Samples from the time domain.
 
 **timedomainbodygyrojerkmeanx** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
-is calculated is the mean body gyro jerk along the X-axis. Samples from the time domain.
+is calculated is the mean gyro jerk along the X-axis. Samples from the time domain.
 
 **timedomainbodygyrojerkmeany** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
-is calculated is the mean body gyro jerk along the Y-axis. Samples from the time domain.
+is calculated is the mean gyro jerk along the Y-axis. Samples from the time domain.
 
 **timedomainbodygyrojerkmeanz** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
-is calculated is the mean body gyro jerk along the Y-axis. Samples from the time domain.
+is calculated is the mean gyro jerk along the Y-axis. Samples from the time domain.
 
 **timedomainbodyaccelerationmagnitudemean** *Numeric: [-1, 1]*
 
@@ -146,24 +146,29 @@ is calculated is the mean magnitude of the gravity acceleration in the time doma
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
 is calculated is the mean magnitude of the body acceleration jerk in the time domain.
 
-**timedomainbodygyrojerkmagnitudemean** *Numeric: [-1, 1]*
+**timedomainbodygyrokmagnitudemean** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
 is calculated is the mean magnitude of the body gyro signals in the time domain.
 
-**frequencydomainbodyaccelerationkmeanx** *Numeric: [-1, 1]*
+**timedomainbodygyrojerkmagnitudemean** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the mean magnitude of the body gyro jerk signals in the time domain.
+
+**frequencydomainbodyaccelerationmeanx** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
 is calculated is the mean body acceleration along the X-axis. Samples from the 
 frequency domain.
 
-**frequencydomainbodyaccelerationkmeany** *Numeric: [-1, 1]*
+**frequencydomainbodyaccelerationmeany** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
 is calculated is the mean body acceleration along the Y-axis. Samples from the 
 frequency domain.
 
-**frequencydomainbodyaccelerationkmeanz** *Numeric: [-1, 1]*
+**frequencydomainbodyaccelerationmeanz** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
 is calculated is the mean body acceleration along the Z-axis. Samples from the 
@@ -201,6 +206,11 @@ the frequency domain.
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
 is calculated is the mean gravity acceleration jerk along the Z-axis. Samples from 
 the frequency domain.
+
+**frequencydomainbodyaccelerationjerkkmeanfrequencyx** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the mean frequency of the body acceleration jerk along the X-axis. Samples from the frequency domain.
 
 **frequencydomainbodyaccelerationjerkkmeanfrequencyy** *Numeric: [-1, 1]*
 
@@ -285,7 +295,177 @@ Mean of all samples corresponding to a subject-activity pair. The value which me
 is calculated is the mean magnitude of the body gyro jerk signal in the frequency 
 domain.
 
-**frequencydomainbodygyrojerkmagnitudemean** *Numeric: [-1, 1]*
+**frequencydomainbodygyrojerkmagnitudemeanfrequency** *Numeric: [-1, 1]*
 
 Mean of all samples corresponding to a subject-activity pair. The value which mean 
 is calculated is the mean magnitude of the body gyro jerk signal frequency in the frequency domain.
+
+**timedomainbodyaccelerationstdx** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration along the X-axis. Samples from the time domain.
+
+**timedomainbodyaccelerationstdy** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration along the Y-axis. Samples from the time domain.
+
+**timedomainbodyaccelerationstdz** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration along the Z-axis. Samples from the time domain.
+
+**timedomaingravityaccelerationstdx** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the  gravity acceleration along the X-axis. Samples from the time domain.
+
+**timedomaingravityaccelerationstdy** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the  gravity acceleration along the Y-axis. Samples from the time domain.
+
+**timedomaingravityaccelerationstdz** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the gravity acceleration along the Z-axis. Samples from the time domain.
+
+**timedomainbodyaccelerationjerkstdx** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration jerk along the X-axis. Samples from the time domain.
+
+**timedomainbodyaccelerationjerkstdy** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration jerk along the Y-axis. Samples from the time domain.
+
+**timedomainbodaccelerationjerkstdz** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration jerk along the Z-axis. Samples from the time domain.
+
+**timedomainbodygyrostdx** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body gyro signal along the X-axis. Samples from the time domain.
+
+**timedomainbodygyrostdy** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body gyro signal along the Y-axis. Samples from the time domain.
+
+**timedomainbodygyrostdz** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body gyro signal along the Z-axis. Samples from the time domain.
+
+**timedomainbodygyrojerkstdx** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body gyro jerk signal along the X-axis. Samples from the time domain.
+
+**timedomainbodygyrojerkstdy** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body gyro jerk signal along the Y-axis. Samples from the time domain.
+
+**timedomainbodygyrojerkstdz** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body gyro jerk signal along the Z-axis. Samples from the time domain.
+
+**timedomainbodyaccelerationmagnitudestd** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the magnitude of the body acceleration 
+signal. Samples from the time domain.
+
+**timedomaingravityaccelerationmagnitudestd** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the magnitude of the gravity acceleration 
+signal. Samples from the time domain.
+
+**timedomainbodyacceleratiojerknmagnitudestd** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the magnitude of the body acceleration jerk 
+signal. Samples from the time domain.
+
+**timedomainbodygyromagnitudestd** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the magnitude of the body gyro 
+signal. Samples from the time domain.
+
+**timedomainbodygyrojerkmagnitudestd** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the magnitude of the body gyro jerk
+signal. Samples from the time domain.
+
+**frequencydomainbodyaccelerationstdx** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration along the X-axis. Samples from the frequency domain.
+
+**frequencydomainbodyaccelerationstdy** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration along the Y-axis. Samples from the frequency domain.
+
+**frequencydomainbodyaccelerationstdz** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration along the Z-axis. Samples from the frequency domain.
+
+**frequencydomainbodyaccelerationjerkstdx** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration jerk along the X-axis. Samples from the frequency domain.
+
+**frequencydomainbodyaccelerationjerkstdy** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration jerk along the Y-axis. Samples from the frequency domain.
+
+**frequencydomainbodyaccelerationjerkstdz** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body acceleration jerk along the Z-axis. Samples from the frequency domain.
+
+**frequencydomainbodygyrostdx** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body gyro signal along the X-axis. Samples from the frequency domain.
+
+**frequencydomainbodygyrostdy** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body gyro signal along the Y-axis. Samples from the frequency domain.
+
+**frequencydomainbodygyrostdz** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the body gyro signal along the Z-axis. Samples from the frequency domain.
+
+**frequencydomainbodyaccelerationmagnitudestd** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the magnitude of the body acceleration. Samples from the frequency domain.
+
+**frequencydomainbodyaccelerationjerkmagnitudestd** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the magnitude of the body acceleration jerk. Samples from the frequency domain.
+
+**frequencydomainbodygyromagnitudestd** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the magnitude of the body gyro signal. Samples from the frequency domain.
+
+**frequencydomainbodygyrojerkmagnitudestd** *Numeric: [-1, 1]*
+
+Mean of all samples corresponding to a subject-activity pair. The value which mean 
+is calculated is the standard deviation of the magnitude of the body gyro jerk signal. Samples from the frequency domain.
