@@ -31,8 +31,8 @@ installPackageIfMissing <- function(x) {
     
     if (!require(x, character.only = TRUE)) {
         ## Install package if missing
-        message(informationString)
         informationString = paste(c("Installing dependent package ", x))
+        message(informationString)
         install.packages(x, dep=TRUE, repos="http://cran.rstudio.com/")
         
         ## Verify installation of package
@@ -63,6 +63,27 @@ extractActivitiesByName <- function(activitiesFile, activityTable) {
     namedActivities
 }
 
+## Given a feature description, create a sanitized version of this description 
+## that is suitable for use as a column name. See readme for details.
+sanitizeFeatureDescription <- function(featureDescription) {
+    description <- gsub("-m", "M", featureDescription)
+    description <- gsub("-s", "S", description)
+    description <- gsub("()-", "", description)
+    description <- gsub("-", "0", description)
+    description <- gsub("()", "", description, fixed=TRUE)
+    description <- gsub("BodyBody", "Body", description)
+    description <- gsub("Mag", "Magnitude", description)
+    description <- gsub("Acc", "Acceleration", description)
+    description <- gsub("Freq", "Frequency", description)
+    if (startsWith(description, "f")) {
+        description <- paste("frequencyDomain", substring(description, 2, nchar(description)), sep="")
+    } else if (startsWith(description, "t")) {
+        description <- paste("timeDomain", substring(description, 2, nchar(description)), sep="")
+    }
+    
+    tolower(description)
+}
+
 ## Build a part of the "raw" tidy dataset. The 'isTest' argument determines 
 ## whether to use the test or training part of the dataset.
 buildTidyDatasetPart <- function(isTest, activityTable, featureTable) {
@@ -79,7 +100,7 @@ buildTidyDatasetPart <- function(isTest, activityTable, featureTable) {
     
     ## Start by selecting the desired columns from the features file
     filteredFeatures <- extractDesiredFeatures(featuresFile, featureTable)
-    
+
     ## Extract the subjects
     subjects = read.table(subjectFile)
     
@@ -89,7 +110,7 @@ buildTidyDatasetPart <- function(isTest, activityTable, featureTable) {
     ## Now combine all the columns into one table
     tidyDatasetPart = data.table(Subject=subjects$V1)
     for (i in 1:length(featureTable$Description)) {
-        description <- featureTable$Description[i]
+        description <- sanitizeFeatureDescription(featureTable$Description[i])
         observations <- filteredFeatures[, i]
         tidyDatasetPart[[description]] <- observations
     }
@@ -102,11 +123,15 @@ buildTidyDatasetPart <- function(isTest, activityTable, featureTable) {
 ################## Tidy Data Script ##################
 
 ## Install dependent packages if not allready present
-requiredPackages <- c("dplyr")
+requiredPackages <- c("dplyr", "gdata")
+for (package in requiredPackages) {
+    installPackageIfMissing(package)
+}
 
 ## Load libraries
 library(data.table)
 library(dplyr)
+library(gdata)
 
 ## The project text states that the script should be able to run if the Samsung
 ## data is present in the working directory. If it is not, help out the user 

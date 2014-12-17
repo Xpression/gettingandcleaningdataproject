@@ -15,8 +15,8 @@ This script relies heavily on the use of helper functions. These are used to
 enhance readability.
 
 ### Installation of necessary packages
-This script is reliant on the dplyr package. This package will be installed 
-automatically if necessary.
+This script is reliant on the dplyr and gdata packages. These package will be 
+installed automatically if necessary.
 
 ### Input dataset
 The project text states that the script shoul run as long as the input dataset 
@@ -37,7 +37,7 @@ more thorough description of this output.
 
 ### Script operation
 The script runs through the following steps:
-1. Install dplyr package if missing, and load necessary libraries.
+1. Install dplyr and gdata packages if missing, and load necessary libraries.
 
 2. If missing, download input dataset. Unzip it, and create output folder.
 
@@ -50,8 +50,18 @@ as all features from the original dataset containing "mean" or "std" in its name
 tables, build a partial "raw" version of the tidy dataset. These two parts 
 each contain one column per "interesting" feature, as well as columns describing 
 which activity (in human readable form) and subject the measurement stems from.
-NOTE: At this point, the dataset is tidy as each column corresponds to a single 
-measurement and each row corresponds to a single measurement of these variables.
+**NOTE:** At this point, the dataset is tidy as each column corresponds to a single 
+measurement and each row corresponds to a single measurement of these variables. 
+Also, the column names used in these parts are tidy by the standards of TA 
+David Hood (see https://class.coursera.org/getdata-016/forum/thread?thread_id=76).
+I.e., column names should:
+    * Be lower case when possible.
+
+    * Descriptive (Diagnosis versus Dx).
+
+    * Not duplicated.
+
+    * Not have underscores or dots or white spaces. 
 
 6. Combine the two parts into a single large raw tidy dataset.
 
