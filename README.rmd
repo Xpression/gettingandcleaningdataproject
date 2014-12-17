@@ -52,7 +52,7 @@ tables, build a partial "raw" version of the tidy dataset. These two parts
 each contain one column per "interesting" feature, as well as columns describing 
 which activity (in human readable form) and subject the measurement stems from.
 **NOTE:** At this point, the dataset is tidy as each column corresponds to a single 
-measurement and each row corresponds to a single measurement of these variables. 
+variable and each row corresponds to a single measurement of these variables. 
 Also, the column names used in these parts are tidy by the standards of TA 
 David Hood (see https://class.coursera.org/getdata-016/forum/thread?thread_id=76).
 I.e., column names should:
